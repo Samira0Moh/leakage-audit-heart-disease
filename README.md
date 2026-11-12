@@ -2,7 +2,7 @@
 
 Code and results for the paper:
 
-> Hassan, S. M., & Alsadi, N. A. A. *Too Good to Be True? Leakage Audit of Swarm Feature Selection in Heart Disease Prediction.* Journal of Academic Research, The Libyan Academy for Postgraduate Studies (submitted).
+> Alsaadi, S. M., & Alsadi, N. A. A. *Too Good to Be True? Leakage Audit of Swarm Feature Selection in Heart Disease Prediction.* Journal of Academic Research, The Libyan Academy for Postgraduate Studies (submitted).
 
 ## Environment
 Python 3.13.1 on Google Colab, scikit-learn 1.6.1, imbalanced-learn 0.14.2, XGBoost 3.4.1.
