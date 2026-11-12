@@ -1,0 +1,9 @@
+clf,method,n_blocks,friedman_p,rank_all,rank_method,diff_vs_all,holm_p
+SVM,PSO,9,0.0109,1.44,3.94,2.09,0.0156
+SVM,LGWO,9,0.0109,1.44,3.5,2.17,0.0352
+SVM,PSOGWO,9,0.0109,1.44,3.17,1.42,0.0625
+SVM,GWO,9,0.0109,1.44,2.94,1.36,0.0742
+Stacking,PSO,9,0.0018,1.11,3.56,2.7,0.0156
+Stacking,GWO,9,0.0018,1.11,3.0,1.81,0.0156
+Stacking,LGWO,9,0.0018,1.11,3.67,2.49,0.0156
+Stacking,PSOGWO,9,0.0018,1.11,3.67,2.26,0.0156

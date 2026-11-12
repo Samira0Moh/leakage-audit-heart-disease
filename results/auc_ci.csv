@@ -1,0 +1,17 @@
+dataset,model,auc,ci_low,ci_high
+cleveland,SVM (C0),87.1,81.9,92.2
+cleveland,Stacking (C0),87.2,82.1,92.3
+cleveland,Logistic regression,90.4,86.2,94.6
+cleveland,SVM tuned (nested CV),89.8,85.5,94.1
+hungarian,SVM (C0),88.1,83.5,92.6
+hungarian,Stacking (C0),88.0,83.5,92.5
+hungarian,Logistic regression,91.0,87.1,94.8
+hungarian,SVM tuned (nested CV),90.1,85.9,94.4
+switzerland,SVM (C0),78.3,56.8,99.9
+switzerland,Stacking (C0),79.0,57.5,100.5
+switzerland,Logistic regression,68.9,46.1,91.8
+switzerland,SVM tuned (nested CV),64.4,38.8,89.9
+va,SVM (C0),67.7,57.3,78.0
+va,Stacking (C0),66.0,56.1,75.9
+va,Logistic regression,68.3,59.9,76.8
+va,SVM tuned (nested CV),71.7,62.0,81.4

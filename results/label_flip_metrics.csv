@@ -1,0 +1,3 @@
+view,accuracy,recall_disease,precision_disease
+Researcher's belief (Kaggle target=1 'disease'),77.15,83.54,76.54
+Truth (UCI: 1 = disease),77.15,69.57,78.05

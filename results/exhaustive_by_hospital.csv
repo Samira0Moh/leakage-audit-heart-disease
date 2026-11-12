@@ -1,0 +1,5 @@
+dataset,All features,Exhaustive (KNN fitness),GWO (KNN fitness),GWO (SVM fitness)
+cleveland,82.38,81.19,79.72,79.87
+hungarian,82.55,81.07,80.95,80.41
+switzerland,90.6,90.51,89.72,89.0
+va,71.33,71.17,71.5,69.33

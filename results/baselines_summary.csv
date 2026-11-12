@@ -1,0 +1,13 @@
+dataset,model,acc,auc,sens,spec,brier,acc_sd,inflation_vs_nested,ci_low,ci_high,p_value
+cleveland,Logistic regression,83.54,90.41,79.42,87.06,0.123,6.87,,,,
+cleveland,SVM tuned (nested CV),83.34,89.82,77.11,88.65,,7.12,,,,
+cleveland,SVM tuned on test fold (L5),86.84,89.8,80.18,92.53,,6.37,3.49,0.93,6.06,0.0086
+hungarian,Logistic regression,85.86,90.99,76.2,91.3,0.109,5.69,,,,
+hungarian,SVM tuned (nested CV),84.35,90.14,71.24,91.73,,6.19,,,,
+hungarian,SVM tuned on test fold (L5),87.21,89.54,74.84,94.18,,5.34,2.86,0.66,5.05,0.012
+switzerland,Logistic regression,91.56,68.94,97.89,0.0,0.074,5.22,,,,
+switzerland,SVM tuned (nested CV),92.87,64.38,99.33,0.0,,4.25,,,,
+switzerland,SVM tuned on test fold (L5),94.17,65.25,100.0,8.0,,3.68,1.29,-1.75,4.34,0.3968
+va,Logistic regression,74.6,68.35,91.15,26.47,0.18,6.13,,,,
+va,SVM tuned (nested CV),75.5,71.71,95.3,17.8,,5.27,,,,
+va,SVM tuned on test fold (L5),79.4,71.68,97.33,27.4,,4.48,3.9,0.93,6.87,0.011

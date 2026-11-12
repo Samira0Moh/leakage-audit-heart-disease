@@ -1,0 +1,8 @@
+,Researcher's belief (Kaggle target=1 'disease'),Truth (UCI: 1 = disease),interpretation_flipped
+age,-0.175,0.175,True
+trestbps,-0.218,0.218,True
+chol,-0.301,0.301,True
+thalach,0.657,-0.657,True
+oldpeak,-0.693,0.693,True
+sex,-0.777,0.777,True
+exang,-0.658,0.658,True

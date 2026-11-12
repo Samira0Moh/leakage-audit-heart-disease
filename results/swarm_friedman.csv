@@ -1,0 +1,11 @@
+clf,method,mean_rank,friedman_p,n_blocks
+SVM,All features,1.54,0.0032,12
+SVM,PSO,4.0,0.0032,12
+SVM,GWO,3.0,0.0032,12
+SVM,PSOGWO,3.29,0.0032,12
+SVM,LGWO,3.17,0.0032,12
+Stacking,All features,1.25,0.0006,12
+Stacking,PSO,3.62,0.0006,12
+Stacking,GWO,3.17,0.0006,12
+Stacking,PSOGWO,3.42,0.0006,12
+Stacking,LGWO,3.54,0.0006,12

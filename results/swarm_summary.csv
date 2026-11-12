@@ -1,0 +1,51 @@
+dataset,clf,method,acc,std,n_feat,fitness_calls,fitness_evals,fs_seconds,mean_rank,friedman_p
+cleveland,SVM,All features,82.38,6.4,13.0,0,0,0.0,1.54,0.0032
+cleveland,SVM,GWO,79.72,7.81,7.2,1020,192,4.22,3.0,0.0032
+cleveland,SVM,LGWO,81.16,6.7,7.6,1070,193,4.18,3.17,0.0032
+cleveland,SVM,PSO,80.74,7.37,8.0,1020,164,3.84,4.0,0.0032
+cleveland,SVM,PSOGWO,80.61,7.17,7.6,1020,206,5.18,3.29,0.0032
+cleveland,Stacking,All features,82.49,7.28,13.0,0,0,0.0,1.25,0.0006
+cleveland,Stacking,GWO,80.17,6.93,7.2,1020,192,4.22,3.17,0.0006
+cleveland,Stacking,LGWO,81.06,6.37,7.6,1070,193,4.18,3.54,0.0006
+cleveland,Stacking,PSO,81.07,6.35,8.0,1020,164,3.84,3.62,0.0006
+cleveland,Stacking,PSOGWO,79.63,6.87,7.6,1020,206,5.18,3.42,0.0006
+hungarian,SVM,All features,82.55,6.61,13.0,0,0,0.0,1.54,0.0032
+hungarian,SVM,GWO,80.95,7.98,7.7,1020,186,4.67,3.0,0.0032
+hungarian,SVM,LGWO,80.74,7.08,7.9,1070,208,5.06,3.17,0.0032
+hungarian,SVM,PSO,80.07,7.88,8.1,1020,154,3.47,4.0,0.0032
+hungarian,SVM,PSOGWO,80.39,7.92,7.7,1020,215,4.85,3.29,0.0032
+hungarian,Stacking,All features,83.21,6.61,13.0,0,0,0.0,1.25,0.0006
+hungarian,Stacking,GWO,81.75,7.06,7.7,1020,186,4.67,3.17,0.0006
+hungarian,Stacking,LGWO,81.33,7.03,7.9,1070,208,5.06,3.54,0.0006
+hungarian,Stacking,PSO,81.19,6.39,8.1,1020,154,3.47,3.62,0.0006
+hungarian,Stacking,PSOGWO,80.97,7.57,7.7,1020,215,4.85,3.42,0.0006
+kaggle1025 (duplicated),SVM,All features,93.04,2.3,13.0,0,0,0.0,,
+kaggle1025 (duplicated),SVM,GWO,87.52,3.5,7.2,1020,186,6.21,,
+kaggle1025 (duplicated),SVM,LGWO,87.16,3.16,7.3,1070,201,7.16,,
+kaggle1025 (duplicated),SVM,PSO,88.48,3.16,7.8,1020,154,5.88,,
+kaggle1025 (duplicated),SVM,PSOGWO,88.43,3.34,7.6,1020,206,7.36,,
+kaggle1025 (duplicated),Stacking,All features,99.87,0.72,13.0,0,0,0.0,,
+kaggle1025 (duplicated),Stacking,GWO,99.09,3.18,7.2,1020,186,6.21,,
+kaggle1025 (duplicated),Stacking,LGWO,98.54,2.76,7.3,1070,201,7.16,,
+kaggle1025 (duplicated),Stacking,PSO,98.92,3.19,7.8,1020,154,5.88,,
+kaggle1025 (duplicated),Stacking,PSOGWO,98.83,3.34,7.6,1020,206,7.36,,
+switzerland,SVM,All features,90.6,6.23,13.0,0,0,0.0,1.54,0.0032
+switzerland,SVM,GWO,89.72,8.8,5.1,1020,156,3.55,3.0,0.0032
+switzerland,SVM,LGWO,90.28,8.36,5.1,1070,166,3.7,3.17,0.0032
+switzerland,SVM,PSO,89.12,7.81,5.8,1020,163,3.37,4.0,0.0032
+switzerland,SVM,PSOGWO,89.7,8.24,5.4,1020,198,4.1,3.29,0.0032
+switzerland,Stacking,All features,92.48,6.31,13.0,0,0,0.0,1.25,0.0006
+switzerland,Stacking,GWO,90.81,6.97,5.1,1020,156,3.55,3.17,0.0006
+switzerland,Stacking,LGWO,90.83,6.97,5.1,1070,166,3.7,3.54,0.0006
+switzerland,Stacking,PSO,91.05,6.51,5.8,1020,163,3.37,3.62,0.0006
+switzerland,Stacking,PSOGWO,91.35,7.01,5.4,1020,198,4.1,3.42,0.0006
+va,SVM,All features,71.33,9.64,13.0,0,0,0.0,1.54,0.0032
+va,SVM,GWO,71.5,8.72,6.0,1020,189,3.92,3.0,0.0032
+va,SVM,LGWO,67.83,10.64,6.0,1070,187,3.9,3.17,0.0032
+va,SVM,PSO,69.17,10.43,6.7,1020,161,3.81,4.0,0.0032
+va,SVM,PSOGWO,71.0,10.03,6.9,1020,203,5.03,3.29,0.0032
+va,Stacking,All features,73.5,7.21,13.0,0,0,0.0,1.25,0.0006
+va,Stacking,GWO,71.83,9.42,6.0,1020,189,3.92,3.17,0.0006
+va,Stacking,LGWO,69.33,10.89,6.0,1070,187,3.9,3.54,0.0006
+va,Stacking,PSO,68.83,9.62,6.7,1020,161,3.81,3.62,0.0006
+va,Stacking,PSOGWO,71.83,9.33,6.9,1020,203,5.03,3.42,0.0006

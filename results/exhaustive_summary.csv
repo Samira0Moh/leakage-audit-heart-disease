@@ -1,0 +1,5 @@
+method,acc,acc_sd,n_feat,inner_acc,friedman_p
+All features,81.71,10.0,13.0,,0.0077
+Exhaustive (KNN fitness),80.98,10.33,6.81,86.81,0.0077
+GWO (KNN fitness),80.47,10.48,6.49,,0.0077
+GWO (SVM fitness),79.65,10.66,7.36,,0.0077

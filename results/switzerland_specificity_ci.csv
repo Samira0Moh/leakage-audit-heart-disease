@@ -1,0 +1,7 @@
+model,n_healthy,spec,ci_low,ci_high
+SVM (C0),8,38.0,14.0,69.8
+Stacking (C0),8,36.0,12.8,68.3
+Logistic regression,8,0.0,0.0,32.4
+SVM tuned (nested CV),8,0.0,0.0,32.4
+SVM (L3 SMOTE before split),8,68.0,35.0,89.4
+Stacking (L3 SMOTE before split),8,60.0,28.7,84.8

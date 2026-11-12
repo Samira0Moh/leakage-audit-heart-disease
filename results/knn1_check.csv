@@ -1,0 +1,4 @@
+data,rows,knn1_acc,sd
+"Kaggle 1,025 (with duplicates)",1025,99.86,0.68
+"Kaggle, duplicates removed (302)",302,76.14,6.97
+UCI Cleveland (303),303,74.9,7.58
