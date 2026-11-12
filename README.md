@@ -33,7 +33,7 @@ See `datasets/README.md`. The UCI files are included; the two Kaggle files must 
 
 `fs_algorithms.py` contains the swarm optimizers and the fitness function. `step1_check_data.py` is an optional quick duplicate check.
 `results/` holds the outputs reported in the paper; re-running overwrites them.
-Code comments are partly in Arabic.
+All comments and messages are in English.
 
 ## License
 Code: MIT. UCI data: CC BY 4.0.
