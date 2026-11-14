@@ -1,7 +1,7 @@
 """
-make_paper_figures.py — رسومات الورقة بعرض عمود واحد (3.4 inch) وتنفع للطباعة أبيض وأسود
-  figures/paper_fig1_leakage.png      : الفرق عن المسار الصحيح + فترة الثقة 95% لكل نوع تسريب
-  figures/paper_fig2_reproduction.png : إعادة الورقة المنشورة
+make_paper_figures.py — paper figures at single-column width (3.4 inch), readable in black and white
+  figures/paper_fig1_leakage.png      : gain over the leak-free pipeline + 95% CI for each leakage type (values printed on the right)
+  figures/paper_fig2_reproduction.png : reproduction of the published pipeline
 """
 import numpy as np, pandas as pd
 from pathlib import Path
@@ -10,7 +10,7 @@ plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "
                      "axes.linewidth": .6, "xtick.major.width": .6, "ytick.major.width": .6})
 R = Path("results"); F = R / "figures"; F.mkdir(parents=True, exist_ok=True)
 L = pd.read_csv(R / "leakage_summary.csv")
-# L5 (الضبط على الاختبار) من step7: الفرق عن SVM nested، نحطوه كصف إضافي في لوحة SVM
+# L5 (tuning on the test fold) from step7: gain over the nested-tuned SVM, added as an extra row in the SVM panel
 if (R / "baselines_summary.csv").exists():
     Bs = pd.read_csv(R / "baselines_summary.csv")
     Bs = Bs[Bs.model == "SVM tuned on test fold (L5)"]
@@ -21,10 +21,10 @@ conds = ["L1 scaling before split", "L2 GWO before split", "L3 SMOTE before spli
 lab = ["L1 scaling", "L2 GWO selection", "L3 SMOTE", "L4a duplication\n(controlled)", "L4b Kaggle file", "L5 test-set\ntuning*"]
 hosp = ["cleveland", "hungarian", "switzerland", "va"]
 style = {"cleveland": ("#2a78d6", "o"), "hungarian": ("#eb6834", "s"), "switzerland": ("#1baf7a", "^"), "va": ("#444444", "D")}
-fig, axes = plt.subplots(2, 1, figsize=(3.4, 4.2), sharex=True,
+fig, axes = plt.subplots(2, 1, figsize=(3.4, 5.2), sharex=True,
                          gridspec_kw=dict(height_ratios=[len(conds), len(conds) - 1]))
 for ax, clf in zip(axes, ["SVM", "Stacking"]):
-    cs = conds if clf == "SVM" else conds[:-1]          # L5 لـ SVM بس
+    cs = conds if clf == "SVM" else conds[:-1]          # L5 for the SVM only (stacking is not tuned)
     for i, h in enumerate(hosp):
         g = L[(L.dataset == h) & (L.clf == clf)].set_index("condition").reindex(cs)
         y = np.arange(len(cs)) + (i - 1.5) * 0.17
@@ -32,6 +32,8 @@ for ax, clf in zip(axes, ["SVM", "Stacking"]):
         ok = g.inflation.notna()
         c, m = style[h]
         ax.hlines(y[ok], lo[ok], hi[ok], color=c, lw=.8)
+        for yy, v in zip(y[ok], g.inflation[ok]):
+            ax.text(1.02, yy, f"{v:+.1f}", transform=ax.get_yaxis_transform(), color=c, fontsize=5.0, va="center", ha="left", clip_on=False)
         ax.plot(g.inflation[ok], y[ok], m, color=c, ms=3.2, mec="white", mew=.4,
                 label=h.capitalize() if h != "va" else "Long Beach VA")
     ax.axvline(0, color="k", lw=.6)
