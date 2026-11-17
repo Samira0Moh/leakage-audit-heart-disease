@@ -5,7 +5,7 @@ Code and results for the paper:
 > Alsaadi, S. M., & Alsadi, N. A. A. *Too Good to Be True? Leakage Audit of Swarm Feature Selection in Heart Disease Prediction.* Journal of Academic Research, The Libyan Academy for Postgraduate Studies (submitted).
 
 ## Environment
-Python 3.13.1 on Google Colab, scikit-learn 1.6.1, imbalanced-learn 0.14.2, XGBoost 3.4.1.
+Python 3.13 on Google Colab, scikit-learn 1.6.1, imbalanced-learn 0.14.2, XGBoost 3.4.1.
 ```
 pip install -r requirements.txt
 ```
@@ -30,7 +30,6 @@ See `datasets/README.md`. The UCI files are included; the two Kaggle files must 
 | `step10_ablation.py` | Model vs. preprocessing ablation | `ablation_*.csv` | ~30 min |
 | `step11_pooled_auc.py` | Pooled patient-level AUC with bootstrap | `pooled_auc_bootstrap.csv` | ~1 min |
 | `step12_seed_sensitivity.py` | Duplication effect (C0 vs. L4a) repeated with six seeds | `seed_sensitivity*.csv` | ~20 min |
-| `step13_fuzzy_topsis.py` | Fuzzy TOPSIS ranking of the ten leak-free pipelines (course version of the paper) | `fuzzy_topsis_*.csv` | s |
 | `step14_friedman_hospital_blocks.py` | Friedman test with the four hospitals as blocks (sensitivity analysis) | `friedman_hospital_blocks.csv` | s |
 | `step15_external_ci.py` | Bootstrap CIs and mean predicted risk for the external validation | `external_validation_ci.csv` | ~2 min |
 | `make_figures.py`, `make_paper_figures.py` | Figures and tables | `figures/`, `paper_tables.md` | s |
@@ -44,3 +43,5 @@ All comments and messages are in English (the Arabic figure script contains Arab
 Code: MIT. UCI data: CC BY 4.0.
 
 **Update (16 Nov 2026).** Specificity is now undefined (NaN) and excluded from the mean in test folds without any patient free of disease (10 of 50 Swiss folds); `leakage_*`, `baselines_*` and `switzerland_specificity_ci.csv` were corrected accordingly. Accuracy and AUC are unchanged.
+
+**Update (17 Nov 2026).** The main experiments (`step0`, `step2`, `step3`, `step3b`, `step14`, `step15`) were re-run by the authors on Google Colab (Python 3.13, scikit-learn 1.6.1); all results were identical except the L3 condition on Long Beach VA, which differs slightly from a run with scikit-learn 1.9.1. `leakage_*.csv` and Figure 1 now hold the Colab results reported in the paper. The remaining analyses were run with scikit-learn 1.9.1.
