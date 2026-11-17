@@ -43,7 +43,7 @@ def pipe(est):
 
 def mets(y, pred, score, prob=None):
     return dict(acc=accuracy_score(y, pred), auc=roc_auc_score(y, score) if len(set(y)) > 1 else np.nan,
-                sens=recall_score(y, pred), spec=recall_score(y, pred, pos_label=0),
+                sens=recall_score(y, pred), spec=recall_score(y, pred, pos_label=0) if (y == 0).any() else np.nan,
                 brier=brier_score_loss(y, prob) if prob is not None else np.nan)
 
 

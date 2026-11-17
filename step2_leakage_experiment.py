@@ -100,7 +100,8 @@ def select(X, y, seed, scoring="accuracy"):   # GWO لاختيار الخصائ�
 def metrics(yte, pred, prob):
     return dict(acc=accuracy_score(yte, pred), f1=f1_score(yte, pred),
                 auc=roc_auc_score(yte, prob) if len(set(yte)) > 1 else np.nan,
-                sens=recall_score(yte, pred), spec=recall_score(yte, pred, pos_label=0),
+                sens=recall_score(yte, pred),
+                spec=recall_score(yte, pred, pos_label=0) if (yte == 0).any() else np.nan,   # no healthy patient in fold => undefined
                 brier=brier_score_loss(yte, prob))
 
 

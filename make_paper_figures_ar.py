@@ -4,6 +4,8 @@ Requires matplotlib >= 3.11 (native Arabic text shaping).
 Usage: python make_paper_figures_ar.py   ->  results/figures/paper_fig1_leakage_ar.png, paper_fig2_reproduction_ar.png
 """
 import numpy as np, pandas as pd
+from decimal import Decimal, ROUND_HALF_UP
+def r1(v): return float(Decimal(str(v)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))  # round half up, as in the tables
 from pathlib import Path
 
 
@@ -32,7 +34,7 @@ for ax, clf, ttl in zip(axes, ["SVM", "Stacking"], ["SVM", ar("التكديس (S
         ok = g.inflation.notna(); c, m = style[h]
         ax.hlines(y[ok], lo[ok], hi[ok], color=c, lw=.8)
         for yy, v in zip(y[ok], g.inflation[ok]):
-            ax.text(1.02, yy, f"{v:+.1f}", transform=ax.get_yaxis_transform(), color=c, fontsize=5.0, va="center", ha="left", clip_on=False)
+            ax.text(1.02, yy, f"{r1(v):+.1f}", transform=ax.get_yaxis_transform(), color=c, fontsize=5.0, va="center", ha="left", clip_on=False)
         ax.plot(g.inflation[ok], y[ok], m, color=c, ms=3.2, mec="white", mew=.4, label=ar(names[h]))
     ax.axvline(0, color="k", lw=.6)
     ax.set_yticks(range(len(cs))); ax.set_yticklabels(lab[:len(cs)]); ax.set_ylim(len(cs) - 0.4, -0.6)

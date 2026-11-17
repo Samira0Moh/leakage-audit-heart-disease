@@ -1,0 +1,5 @@
+clf,blocks,friedman_p,rank_All features,rank_PSO,rank_GWO,rank_PSOGWO,rank_LGWO
+SVM,12 (hospital x repeat),0.0032,1.54,4.0,3.0,3.29,3.17
+SVM,4 (hospital),0.078,1.25,4.25,2.75,3.75,3.0
+Stacking,12 (hospital x repeat),0.0006,1.25,3.62,3.17,3.42,3.54
+Stacking,4 (hospital),0.0862,1.0,3.5,3.38,3.62,3.5

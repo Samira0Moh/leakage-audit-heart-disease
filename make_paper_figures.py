@@ -4,6 +4,8 @@ make_paper_figures.py — paper figures at single-column width (3.4 inch), reada
   figures/paper_fig2_reproduction.png : reproduction of the published pipeline
 """
 import numpy as np, pandas as pd
+from decimal import Decimal, ROUND_HALF_UP
+def r1(v): return float(Decimal(str(v)).quantize(Decimal("0.1"), rounding=ROUND_HALF_UP))  # round half up, as in the tables
 from pathlib import Path
 import matplotlib; matplotlib.use("Agg"); import matplotlib.pyplot as plt
 plt.rcParams.update({"font.family": "serif", "font.serif": ["Times New Roman", "DejaVu Serif"], "font.size": 7,
@@ -33,7 +35,7 @@ for ax, clf in zip(axes, ["SVM", "Stacking"]):
         c, m = style[h]
         ax.hlines(y[ok], lo[ok], hi[ok], color=c, lw=.8)
         for yy, v in zip(y[ok], g.inflation[ok]):
-            ax.text(1.02, yy, f"{v:+.1f}", transform=ax.get_yaxis_transform(), color=c, fontsize=5.0, va="center", ha="left", clip_on=False)
+            ax.text(1.02, yy, f"{r1(v):+.1f}", transform=ax.get_yaxis_transform(), color=c, fontsize=5.0, va="center", ha="left", clip_on=False)
         ax.plot(g.inflation[ok], y[ok], m, color=c, ms=3.2, mec="white", mew=.4,
                 label=h.capitalize() if h != "va" else "Long Beach VA")
     ax.axvline(0, color="k", lw=.6)

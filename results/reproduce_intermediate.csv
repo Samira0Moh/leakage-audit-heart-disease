@@ -1,0 +1,3 @@
+method,leakfree_kaggle
+SVM (all features),92.74 ± 2.82
+PSOGWO + SVM,91.61 ± 3.10
